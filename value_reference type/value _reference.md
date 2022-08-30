@@ -1,4 +1,4 @@
-# value type, reference type
+# 객체 생성 value type, reference type
 ## Test Code1
     class Program
     {
@@ -88,3 +88,5 @@ Fields:
 0:000> db 000001fc22d82d50+c  (**string의 first char의 메모리 확인**)
 000001fc`22d82d5c  68 00 65 00 6c 00 6c 00-6f 00 00 00 00 00 00 00  h.e.l.l.o....... (**hello 확인가능**)
  ```
+## 결론
+객체를 생성하면 객체 필드의 Value Type은 메모리 공간에 값이 저장되어있다. 반면에 Ref Type은 필요한 객체를 생성하고 포인터 값만 저장을 한다.
