@@ -1,5 +1,5 @@
 # value type, reference type
-## Test
+## Test Code1
     class Program
     {
         private static void Main(string[] args)
@@ -71,6 +71,7 @@ Console.WriteLine(BitConverter.ToDouble(bytes, 0));
 //결과 : 1.2222
 ```
 
+### testString을 확인해보자
 ```
 0:000> !do 000001b280002d50 (**string의 주소확인**)
 Name:        System.String
@@ -84,4 +85,6 @@ Fields:
 00007ffb4dfc85a0  4000283        8         System.Int32  1 instance                5 m_stringLength
 00007ffb4dfc6838  4000284        c          System.Char  1 instance               68 m_firstChar
 00007ffb4dfc59c0  4000288       e0        System.String  0   shared           static Empty
+0:000> db 000001fc22d82d50+c  (**string의 first char의 메모리 확인**)
+000001fc`22d82d5c  68 00 65 00 6c 00 6c 00-6f 00 00 00 00 00 00 00  h.e.l.l.o....... (**hello 확인가능**)
  ```
