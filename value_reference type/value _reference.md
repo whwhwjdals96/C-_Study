@@ -34,16 +34,16 @@
         }
     }
 
-### Windbg
+### Windbg (x64)
  ```
  CsStudy.Program.Main(System.String[]) [C:\Users\whwhw\source\repos\CsStudy\CsStudy\Program.cs @ 16]
     PARAMETERS:
         args (0x000000a4505fec80) = 0x000001b280002d38
     LOCALS:
-        0x000000a4505fec58 = 0x000001b280002d78
+        0x000000a4505fec58 = 0x000001b280002d78 **Main()의 test**
 
 000000a4505fee68 00007ffb50d66893 [GCFrame: 000000a4505fee68] 
-0:000> !do 0x000001b280002d78
+0:000> !do 0x000001b280002d78 **객체 확인**
 Name:        CsStudy.Test
 MethodTable: 00007ffaf1785b18
 EEClass:     00007ffaf1782578
