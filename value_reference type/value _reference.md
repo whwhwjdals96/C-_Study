@@ -38,6 +38,5 @@
 CsStudy.Program.Main(System.String[])
 PARAMETERS:
     args (0x000000a4505fec80) = 0x000001b280002d38
-
 LOCALS:
     0x000000a4505fec58 = 0x000001b280002d78
