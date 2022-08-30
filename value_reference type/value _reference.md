@@ -57,14 +57,21 @@ Fields:
  ```
 ### value1(int), value2(double) 주소를 확인해보자
 ```
-0:000> dd 0x000001b280002d78+18 (**18은 offset**)
+0:000> dd 0x000001b280002d78+18                        (**18은 offset**)
 000001b2`80002d90  00000009 00000000 00000000 00000000 (**9가 들어가 있는 모습을 확인할 수 있다.**)
 
-0:000> dq 0x000001b280002d78+10 (**10은 offset**)
+0:000> dq 0x000001b280002d78+10                        (**10은 offset**)
 000001b2`80002d88  3ff38e21`9652bd3c 00000000`00000009 (**3ff38e21`9652bd3c 확인해보자**)
 ```
 
- ```
+```
+var hex = 0x3ff38e219652bd3c;
+byte[] bytes = BitConverter.GetBytes(hex);
+Console.WriteLine(BitConverter.ToDouble(bytes, 0)); 
+//결과 : 1.2222
+```
+
+```
 0:000> !do 000001b280002d50 (**string의 주소확인**)
 Name:        System.String
 MethodTable: 00007ffb4dfc59c0
