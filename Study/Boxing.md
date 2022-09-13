@@ -96,3 +96,6 @@ Fields:
 Unboxing은 (int)obj1과 같이 명시적으로 변환해야한다.  
 값형식과 호환되지 않는 값을 가진 참조를 Unboxing하면 InvalidCastException이 발생한다.  
 Null값을 가진 참조를 Unboxing하면 NullReferenceException이 발생한다.
+## 이후
+Object ?  
+이 값 형식에서 구현된 임의의 인터페이스 형식 ?
