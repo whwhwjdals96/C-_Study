@@ -21,7 +21,6 @@ namespace CsStudy
 }
 ```
 위의 코드와 같이 int에서 object로 변환할 때 (object)를 적지 않고 암시적으로 변환 할 수 있다.
----
 boxing을 하면 힙에 개체 인스턴스를 생성하고 값을 새 개체에 복사.
 ```
 CsStudy.Program.Main(System.String[])
