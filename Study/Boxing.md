@@ -1,5 +1,5 @@
 ## Boxing/Unboxing
-Boxing은 값 형식을 object 형식 또는 이 값 형식에서 구현된 임의의 인터페이스 형식으로 변환하는 프로세스입니다. \n
+Boxing은 값 형식을 object 형식 또는 이 값 형식에서 구현된 임의의 인터페이스 형식으로 변환하는 프로세스입니다.  
 unboxing하면 개체에서 값 형식이 추출됩니다.
 (출처 : [ms](https://docs.microsoft.com/ko-kr/dotnet/csharp/programming-guide/types/boxing-and-unboxing))
 
