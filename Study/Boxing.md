@@ -45,3 +45,54 @@ Fields:
 
 ```
 위와 같이 boxing은 새 개체를 생성한 것이기 때문에 기존int값을 5로 바꿔도 10이 저장되어 있다.
+
+## Test Code2
+```
+    class Program
+    {
+        private static void Main(string[] args)
+        {
+            int value1 = 10;
+            object obj1=value1;
+
+            try
+            {
+                value1 = (short)obj1; //결과 error : 지정한 캐스트가 잘못되었습니다.
+            }
+            catch(System.InvalidCastException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
+            /*
+            try
+            {
+                value1 = (int)obj1; //결과 error 없음
+            }
+            catch(System.InvalidCastException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            */
+            
+            /*
+            try
+            {
+                obj1 = null;
+                value1 = (int)obj1; // 결과 Null오류 : Null: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+            }
+            catch (System.InvalidCastException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (System.NullReferenceException e)
+            {
+                Console.WriteLine("Null: "+e.Message);
+            }
+            */
+        }
+    }
+``
+Unboxing은 (int)obj1과 같이 명시적으로 변환해야한다.  
+값형식과 호환되지 않는 값을 가진 참조를 Unboxing하면 InvalidCastException이 발생한다.  
+Null값을 가진 참조를 Unboxing하면 NullReferenceException이 발생한다.
