@@ -57,7 +57,7 @@ Fields:
               MT    Field   Offset                 Type VT     Attr            Value Name
 00007ffb4dfc85a0  4000001       10         System.Int32  1 instance                9 value1
 00007ffb4dfc59c0  4000002        8        System.String  0 instance 00000188ad8e2d50 testString
-00007ffaf1775b68  4000003       18   CsStudy.structTest  1 instance 00000188ad8e2d90 structtest  (**Struct Value에 시작 주소 값이 들어있다**)
+00007ffaf1775b68  4000003       18   CsStudy.structTest  1 instance 00000188ad8e2d90 structtest
 
 0:000> !DumpVC /d 00007ffaf1775b68 00000188ad8e2d90
 Name:        CsStudy.structTest
