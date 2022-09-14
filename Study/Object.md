@@ -28,11 +28,11 @@
         }
     }
 ```
-상속을 따로 해주지 않았지만 함수 override가 가능하다. => 암시적 상속  
-.NET 형식 시스템의 모든 형식은 Object 또는 여기에서 파생된 형식에서 암시적으로 상속합니다.  
+상속을 따로 해주지 않았지만 함수 override가 가능하다. => **암시적 상속**  
+.NET 형식 시스템의 모든 형식은 Object 또는 여기에서 파생된 형식에서 암시적으로 상속합니다. (출처 : MS)  
 |형식 범주|다음에서 암시적으로 상속|
 |---|---|
 |class|Object|
 |struct|ValueType, Object|
 |enum|Enum, ValueType, Object|
-|delegate|MulticastDelgate, Delegate, Object|  (출처 : MS)
+|delegate|MulticastDelgate, Delegate, Object|
