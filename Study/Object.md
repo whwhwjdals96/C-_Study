@@ -34,3 +34,5 @@
 |---|---|
 |class|Object|
 |struct|ValueType, Object|
+|enum|Enum, ValueType, Object|
+|delegate|MulticastDelgate, Delegate, Object|
