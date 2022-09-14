@@ -36,3 +36,33 @@
 |struct|ValueType, Object|
 |enum|Enum, ValueType, Object|
 |delegate|MulticastDelgate, Delegate, Object|
+
+### Struct도 Object를 암시적으로 상속 받는다면 Object의 함수를 Override가능?
+```
+    class Program
+    {
+        private static void Main(string[] args)
+        {
+            Point point = new Point(10, 11);
+            Console.WriteLine(point.ToString());
+        }
+    }
+
+    struct Point
+    {
+        int x;
+        int y;
+
+        public Point(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+
+        public override string ToString()
+        {
+            return "position X : " + x + ", " + "position Y : " + y;
+        }
+    }
+```
+가능하다.
