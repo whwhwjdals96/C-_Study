@@ -35,4 +35,5 @@
 |class|Object|
 |struct|ValueType, Object|
 |enum|Enum, ValueType, Object|
-|delegate|MulticastDelgate, Delegate, Object| (출처 : MS)
+|delegate|MulticastDelgate, Delegate, Object|
+(출처 : MS)
