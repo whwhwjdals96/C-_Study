@@ -45,6 +45,7 @@ Test Code1에서 Const선언할 때 static을 따로 적지 않았지만 static�
 ```
 **값이 아직 들어있지 않다.**
 ```
+### Test Code1의 ShowResult메서드 부분을 확인해보자
 .method public hidebysig instance void  ShowResult() cil managed
 {
   // 코드 크기       47 (0x2f)
@@ -64,3 +65,7 @@ Test Code1에서 Const선언할 때 static을 따로 적지 않았지만 static�
   IL_002e:  ret
 } // end of method Test::ShowResult
 ```
+### Const  
+값과 GetNumber()를 비교한다.  
+### Readonly  
+직접적인 값이 아닌 참조로 GetNumber()와 비교한다.
