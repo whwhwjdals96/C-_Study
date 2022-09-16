@@ -70,4 +70,4 @@ Test Code1에서 Const선언할 때 static을 따로 적지 않았지만 static�
 ### Readonly  
 직접적인 값이 아닌 참조로 GetNumber()와 비교한다.
 ## 
-즉 Const는 컴파일을 하면 대체된다. 반면에 Readonly는 런타임이 되기 전까진 값을 평가하지 않는다.
+즉 Const는 컴파일을 하면 값으로 대체된다. 반면에 Readonly는 런타임이 되기 전까진 값을 평가하지 않는다.
