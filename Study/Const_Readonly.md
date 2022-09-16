@@ -44,3 +44,23 @@ Test Code1에서 Const선언할 때 static을 따로 적지 않았지만 static�
 .field private static initonly int32 R // ildasm으로 확인
 ```
 **값이 아직 들어있지 않다.**
+```
+.method public hidebysig instance void  ShowResult() cil managed
+{
+  // 코드 크기       47 (0x2f)
+  .maxstack  8
+  IL_0000:  ldarg.0
+  IL_0001:  call       instance int32 ConsoleApp2.Test::GetNumber()
+  IL_0006:  ldc.i4     0xc8 // 값이 들어있다.
+  IL_000b:  bne.un.s   IL_0017
+  IL_000d:  ldstr      "Compile Time"
+  IL_0012:  call       void [System.Console]System.Console::WriteLine(string)
+  IL_0017:  ldarg.0
+  IL_0018:  call       instance int32 ConsoleApp2.Test::GetNumber()
+  IL_001d:  ldsfld     int32 ConsoleApp2.Test::R // 참조로 컴파일되어있다.
+  IL_0022:  bne.un.s   IL_002e
+  IL_0024:  ldstr      "Run Time"
+  IL_0029:  call       void [System.Console]System.Console::WriteLine(string)
+  IL_002e:  ret
+} // end of method Test::ShowResult
+```
