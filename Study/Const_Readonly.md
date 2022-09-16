@@ -33,13 +33,13 @@
         }
     }
 ```
-## Const  
+### Const  
 ```
 .field private static literal int32 C = int32(0x000000C8) // ildasm으로 확인
 ```
 **암시적으로 정적이다. 또한 값이 들어있다.**  
 Test Code1에서 Const선언할 때 static을 따로 적지 않았지만 static으로 선언되어 있는 것을 확인 할 수있다.
-## Readonly
+### Readonly
 ```
 .field private static initonly int32 R // ildasm으로 확인
 ```
