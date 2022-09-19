@@ -99,3 +99,59 @@ Null값을 가진 참조를 Unboxing하면 NullReferenceException이 발생한�
 ## 이후
 Object ?  
 이 값 형식에서 구현된 임의의 인터페이스 형식 ?
+## 추가
+### 값 형식에서 구현된 임의의 인터페이스 형식
+```
+    class Program
+    {
+        private static void Main(string[] args)
+        {
+            structTest test = new structTest(7);
+            inter iTest = test as inter;   // Boxing 발생
+            iTest.Add(3);
+            iTest.Display();
+        }
+    }
+
+    struct structTest : inter
+    {
+        private int num;
+
+        public structTest(int n)
+        {
+            num = n;
+        }
+
+        public void Add(int a)
+        {
+            this.num += a;
+        }
+
+        public void Display()
+        {
+            Console.WriteLine(num);
+        }
+    }
+
+    interface inter
+    {
+        void Add(int a);
+        void Display();
+    }
+```
+```
+.method private hidebysig static void  Main(string[] args) cil managed
+{
+  .entrypoint
+  // 코드 크기       24 (0x18)
+  .maxstack  8
+  IL_0000:  ldc.i4.7
+  IL_0001:  newobj     instance void CsStudy.structTest::.ctor(int32)
+  IL_0006:  box        CsStudy.structTest     // Boxing 발생
+  IL_000b:  dup
+  IL_000c:  ldc.i4.3
+  IL_000d:  callvirt   instance void CsStudy.inter::Add(int32)
+  IL_0012:  callvirt   instance void CsStudy.inter::Display()
+  IL_0017:  ret
+} // end of method Program::Main
+```
