@@ -155,3 +155,31 @@ Object ?
   IL_0017:  ret
 } // end of method Program::Main
 ```
+### Struct를 그냥 사용하면
+```
+private static void Main(string[] args)
+        {
+            structTest test = new structTest(7);
+            test.Add(4);
+            test.Display();
+        }
+```
+```
+.method private hidebysig static void  Main(string[] args) cil managed
+{
+  .entrypoint
+  // 코드 크기       24 (0x18)
+  .maxstack  2
+  .locals init ([0] valuetype CsStudy.structTest test)
+  IL_0000:  ldloca.s   test
+  IL_0002:  ldc.i4.7
+  IL_0003:  call       instance void CsStudy.structTest::.ctor(int32)
+  IL_0008:  ldloca.s   test
+  IL_000a:  ldc.i4.4
+  IL_000b:  call       instance void CsStudy.structTest::Add(int32)
+  IL_0010:  ldloca.s   test
+  IL_0012:  call       instance void CsStudy.structTest::Display()
+  IL_0017:  ret
+} // end of method Program::Main
+```
+Boxing이 발생하지 않는다.
