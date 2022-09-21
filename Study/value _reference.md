@@ -94,4 +94,4 @@ Fields:
 값 형식 변수에 대한 힙 할당X, 가비지 수진 오버헤드 없음  
 값 형식은 **sealed**, 값 형식에서 파생 할 수 없음  
 struct(값 형식)는 System.ValueType을 (암시적)상속 받았다 => C#은 하나의 Class만을 상속 받을 수 있다.  
-하지만 interface는 상속을 할 수 있다. => interface는 다중 상속이 가능하다.
+하지만 interface는 상속을 할 수 있다. => interface는 다중 상속이 가능하다. [링크](https://github.com/whwhwjdals96/C-_Study/blob/main/Study/Boxing.md#%EC%B6%94%EA%B0%80)
