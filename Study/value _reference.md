@@ -95,3 +95,8 @@ Fields:
 값 형식은 **sealed**, 값 형식에서 파생 할 수 없음  
 struct(값 형식)는 System.ValueType을 (암시적)상속 받았다 => C#은 하나의 Class만을 상속 받을 수 있다.  
 하지만 interface는 상속을 할 수 있다. => interface는 다중 상속이 가능하다. [링크](https://github.com/whwhwjdals96/C-_Study/blob/main/Study/Boxing.md#%EC%B6%94%EA%B0%80)
+## 참조 형식
+delegate, 배열, interface, class, recode  
+개체가 만들어지면 관리되는 힙에 메모리 할당.  
+변수는 개체의 위치에 대한 참조만을 가진다.  
+배열은 System.Array에서 암시적으로 파생
