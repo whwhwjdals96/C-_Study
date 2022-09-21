@@ -88,5 +88,10 @@ Fields:
 0:000> db 000001fc22d82d50+c  (**string의 first char의 메모리 확인**)
 000001fc`22d82d5c  68 00 65 00 6c 00 6c 00-6f 00 00 00 00 00 00 00  h.e.l.l.o....... (**hello 확인가능**)
  ```
-## 결론
-Value Type은 메모리 공간에 값이 저장되어있다. 반면에 Ref Type은 필요한 객체를 생성하고 포인터 값만 저장을 한다.
+## 값 형식
+값 형식은 **System.Object**에서 파생된 **System.ValueType**에서 파생  
+값 형식 변수에는 해당 값이 직접 포함  
+값 형식 변수에 대한 힙 할당X, 가비지 수진 오버헤드 없음  
+값 형식은 **sealed**, 값 형식에서 파생 할 수 없음  
+struct(값 형식)는 System.ValueType을 (암시적)상속 받았다 => C#은 하나의 Class만을 상속 받을 수 있다.  
+하지만 interface는 상속을 할 수 있다. => interface는 다중 상속이 가능하다.
